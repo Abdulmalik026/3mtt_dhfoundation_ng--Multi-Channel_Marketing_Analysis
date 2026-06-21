@@ -47,11 +47,11 @@ Determine which marketing channels meaningfully predict Sales, quantify their ef
 | `Sales` | Resulting sales | $1,000s |
 
 - Each column has a small amount of missing data (well under 1% per column), handled via row-wise deletion after confirming the missingness appears random and unconcentrated (see notebook Section 2 for the full justification).
-- File: [`marketing_data.csv`](./marketing_data.csv)
+- File: [multiple_regression_analysis.ipynb](multiple_regression_analysis.ipynb)
 
 ## Analysis Workflow
 
-The notebook ([`multiple_regression_analysis.ipynb`](./multiple_regression_analysis.ipynb)) follows this structure:
+The notebook ([multiple_regression_analysis.ipynb](multiple_regression_analysis.ipynb)) follows this structure:
 
 Data Loading
 
@@ -97,15 +97,15 @@ Business Recommendation
 
 ## Exploratory Data Analysis
 
-images/distributions.png
+![Plots Showing Distribution of Variables](images/variable_distribution.png)
 
 ## Correlation Analysis
 
-images/correlation_heatmap.png
+![Correlation Matrix: Marketing Channels & Sales](images/correlation_matrix.png)
 
 ## Pairwise Relationships
 
-images/pairplot.png
+![Pairwise Relationship between Sales & Mrk Channels](images/pairplot.png)
 
 ## Regression Model
 The fitted Ordinary Least Squares model follows
@@ -137,30 +137,20 @@ where
 - This is an educational dataset; the unusually high TV–Sales correlation (0.999) is part of what makes it effective for illustrating predictor significance and multicollinearity concepts clearly. Real-world marketing data is typically noisier and may show diminishing returns or interaction effects not captured by this linear, additive model — see the notebook's caveats section for next-step suggestions (e.g., A/B testing, interaction terms).
 
 ## Model Performance
-
-📷 Actual vs Predicted Plot
-
-images/predicted_vs_actual.png
+![Model Performance](images/actual~predicted.png)
 
 ## Residual Diagnostics
+### Residual vs Fitted
+![Residual Diagnostic](images/residual_plot.png)
+
+### Normal Q-Q Plot
+![Q~Q Plot](images/q-qplot.png)
+
+### Residual Histogram
+![Residual Distribution](images/distribution_residuals.png)
 
 Diagnostic analyses found no substantial evidence of violations of the core OLS assumptions.
 
-### Residual vs Fitted
-
-📷 images/residual_plot.png
-
-### Normal Q-Q Plot
-
-📷 images/qq_plot.png
-
-### Scale-Location Plot
-
-📷 images/scale_location.png
-
-### Residual Histogram
-
-📷 images/residual_histogram.png
 
 ## Limitations
 
@@ -192,7 +182,7 @@ Possible extensions include
 ```
 .
 ├── multiple_regression_analysis.ipynb   # Full analysis notebook with executed outputs
-├── marketing_data.csv                   # Raw dataset
+├── market_analysis.csv                  # Raw dataset
 └── README.md                            # This file
 ```
 
