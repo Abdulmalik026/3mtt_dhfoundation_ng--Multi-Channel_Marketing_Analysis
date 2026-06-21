@@ -183,6 +183,7 @@ Possible extensions include
 .
 ├── multiple_regression_analysis.ipynb   # Full analysis notebook with executed outputs
 ├── market_analysis.csv                  # Raw dataset
+├── images                               # Images of plots 
 └── README.md                            # This file
 ```
 
